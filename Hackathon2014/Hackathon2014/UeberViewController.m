@@ -18,6 +18,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.tableView.separatorColor = [UIColor colorWithRed:235.f/255.f green:235.f/255.f blue:235.f/255.f alpha:1.0f];
     //self.tableView.delegate = self;
     // Do any additional setup after loading the view.
 }
@@ -47,10 +51,15 @@
  
      if (indexPath.row == 0) {
          cell.textLabel.text = @"ITCC auf Twitter";
+         cell.backgroundColor = [UIColor whiteColor];
      } else if (indexPath.row == 1) {
          cell.textLabel.text = @"ITCC im Internet";
+                  cell.backgroundColor = [UIColor whiteColor];
      } else if (indexPath.row == 2) {
          cell.textLabel.text = @"ITCC auf Facebook";
+                  cell.backgroundColor = [UIColor whiteColor];
+     } else if (indexPath.row > 2) {
+         cell.backgroundColor = [UIColor clearColor];
      }
  
  return cell;

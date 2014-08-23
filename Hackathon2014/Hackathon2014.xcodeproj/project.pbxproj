@@ -19,6 +19,7 @@
 		32392C8C19A913DE0037DCAA /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 32392C8619A913DE0037DCAA /* Task.m */; };
 		32392C8D19A913DE0037DCAA /* MultipleChoiceTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32392C8819A913DE0037DCAA /* MultipleChoiceTaskViewController.m */; };
 		32392C8F19A914700037DCAA /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32392C8E19A914700037DCAA /* data.plist */; };
+		32392C9219A935380037DCAA /* ColorNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32392C9119A935380037DCAA /* ColorNavigationController.m */; };
 		32892E8719A7CF7F005CCAF1 /* HighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32892E8619A7CF7F005CCAF1 /* HighscoreViewController.m */; };
 		32D433AC19A7BBBD007C601F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D433AB19A7BBBD007C601F /* Foundation.framework */; };
 		32D433AE19A7BBBD007C601F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D433AD19A7BBBD007C601F /* CoreGraphics.framework */; };
@@ -70,6 +71,8 @@
 		32392C8919A913DE0037DCAA /* TaskObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskObserver.h; sourceTree = "<group>"; };
 		32392C8A19A913DE0037DCAA /* TaskObservable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskObservable.h; sourceTree = "<group>"; };
 		32392C8E19A914700037DCAA /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		32392C9019A935380037DCAA /* ColorNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorNavigationController.h; sourceTree = "<group>"; };
+		32392C9119A935380037DCAA /* ColorNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorNavigationController.m; sourceTree = "<group>"; };
 		32892E8519A7CF7F005CCAF1 /* HighscoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreViewController.h; sourceTree = "<group>"; };
 		32892E8619A7CF7F005CCAF1 /* HighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreViewController.m; sourceTree = "<group>"; };
 		32D433A819A7BBBD007C601F /* Hackathon2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +184,8 @@
 				32392C8819A913DE0037DCAA /* MultipleChoiceTaskViewController.m */,
 				32392C8919A913DE0037DCAA /* TaskObserver.h */,
 				32392C8A19A913DE0037DCAA /* TaskObservable.h */,
+				32392C9019A935380037DCAA /* ColorNavigationController.h */,
+				32392C9119A935380037DCAA /* ColorNavigationController.m */,
 				32D433BD19A7BBBD007C601F /* Images.xcassets */,
 				32D433B219A7BBBD007C601F /* Supporting Files */,
 			);
@@ -329,6 +334,7 @@
 				3202730319A8CDAA00959F48 /* UeberViewController.m in Sources */,
 				32392C8C19A913DE0037DCAA /* Task.m in Sources */,
 				32D433B819A7BBBD007C601F /* main.m in Sources */,
+				32392C9219A935380037DCAA /* ColorNavigationController.m in Sources */,
 				3202730219A8CDAA00959F48 /* IntroTableViewController.m in Sources */,
 				32392C8D19A913DE0037DCAA /* MultipleChoiceTaskViewController.m in Sources */,
 				32392C7819A8F0260037DCAA /* StoryViewController.m in Sources */,

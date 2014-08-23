@@ -33,6 +33,7 @@
     if (currentLocation < 1) {
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentLocation"];
     }
+//    self.tableView.backgroundColor = [UIColor whiteColor];
     
 }
 

@@ -248,15 +248,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Task 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GcC-Ij-MLx">
-                                                    <rect key="frame" x="15" y="4" width="57" height="24"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="In Planung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GcC-Ij-MLx">
+                                                    <rect key="frame" x="15" y="4" width="94" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1n-jG-Zgh">
-                                                    <rect key="frame" x="15" y="28" width="50" height="17"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Noch nicht integriert" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1n-jG-Zgh">
+                                                    <rect key="frame" x="15" y="28" width="132" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -264,6 +264,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="UZx-ik-UDE" detailTextLabel="CwL-M4-NGd" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="XkM-Dv-DL3">
                                         <rect key="frame" x="0.0" y="214" width="320" height="50"/>
@@ -272,15 +273,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Task 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UZx-ik-UDE">
-                                                    <rect key="frame" x="15" y="4" width="57" height="24"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="In Planung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UZx-ik-UDE">
+                                                    <rect key="frame" x="15" y="4" width="94" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CwL-M4-NGd">
-                                                    <rect key="frame" x="15" y="28" width="50" height="17"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Noch nicht integriert" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CwL-M4-NGd">
+                                                    <rect key="frame" x="15" y="28" width="132" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -288,6 +289,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <segue destination="qvx-zl-agD" kind="modal" id="EK6-PA-4yJ"/>
                                         </connections>
@@ -299,15 +301,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Task 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="teK-mZ-aXp">
-                                                    <rect key="frame" x="15" y="4" width="57" height="24"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Vaduzer Stadt Tour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="teK-mZ-aXp">
+                                                    <rect key="frame" x="15" y="4" width="167" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hpS-fH-KkL">
-                                                    <rect key="frame" x="15" y="28" width="50" height="17"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Entdecken Sie wichtige Orte in Vaduz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hpS-fH-KkL">
+                                                    <rect key="frame" x="15" y="28" width="242" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -315,6 +317,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <segue destination="H8t-sK-Uy4" kind="modal" id="LDq-uS-erC"/>
                                         </connections>
@@ -333,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="1363" y="881"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Color Navigation Controller-->
         <scene sceneID="PVo-84-jaY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3y3-BH-Jxt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3y3-BH-Jxt" customClass="ColorNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kJd-Tp-XQ9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -422,10 +425,10 @@
             </objects>
             <point key="canvasLocation" x="1889" y="1594"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Color Navigation Controller-->
         <scene sceneID="fqc-bN-n7S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8t-sK-Uy4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8t-sK-Uy4" customClass="ColorNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Hla-2l-eQW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u8y-Ck-vJq">
@@ -441,10 +444,10 @@
             </objects>
             <point key="canvasLocation" x="2004" y="10"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Color Navigation Controller-->
         <scene sceneID="62L-9y-6S2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C6V-we-yhB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C6V-we-yhB" customClass="ColorNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ss3-Cn-sKY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TwD-x9-iFL">
@@ -460,10 +463,10 @@
             </objects>
             <point key="canvasLocation" x="1363" y="1594"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Color Navigation Controller-->
         <scene sceneID="V8z-0F-W0I">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qvx-zl-agD" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qvx-zl-agD" customClass="ColorNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Lel-bw-nQK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7vD-Rd-Y8U">
@@ -529,10 +532,10 @@
             </objects>
             <point key="canvasLocation" x="3540" y="1078"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Color Navigation Controller-->
         <scene sceneID="fXZ-Y0-L0s">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8gc-4Y-1hY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8gc-4Y-1hY" customClass="ColorNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FzN-Wx-Nxr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -547,7 +550,7 @@
             </objects>
             <point key="canvasLocation" x="2591" y="1063"/>
         </scene>
-        <!--Root Task View Controller-->
+        <!--Root Task View Controller - Quiz-->
         <scene sceneID="R2V-sc-OFr">
             <objects>
                 <viewController id="IWm-g4-5wZ" customClass="RootTaskViewController" sceneMemberID="viewController">
@@ -578,7 +581,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KKS-43-JTp"/>
+                    <navigationItem key="navigationItem" title="Quiz" id="KKS-43-JTp"/>
                     <connections>
                         <outlet property="TaskContent" destination="K7u-4a-ho1" id="FDx-e0-Ru2"/>
                         <outlet property="TaskHeaderImage" destination="05t-TL-Bht" id="qbd-Pl-vms"/>
@@ -602,7 +605,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Zpq-hD-9EI"/>
-        <segue reference="V0I-QD-Gu8"/>
-        <segue reference="wE3-EV-uTz"/>
+        <segue reference="EK6-PA-4yJ"/>
+        <segue reference="LDq-uS-erC"/>
     </inferredMetricsTieBreakers>
 </document>
