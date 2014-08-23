@@ -95,8 +95,11 @@ static NSString * const kna = @"name";
     }
     for (Adress * adress in self.locations) {
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(adress.laengengrad, adress.breitengrad);
-        MKPlacemark *placeM = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
-        [self.mapView addAnnotation:placeM];
+        //MKPlacemark *placeM = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
+        MKPointAnnotation *anno = [[MKPointAnnotation alloc] init];
+        anno.coordinate = coordinate;
+        anno.title = adress.name;
+        [self.mapView addAnnotation:anno];
     }
 }
 - (NSInteger)checkTaskNo {
@@ -117,7 +120,8 @@ static NSString * const kna = @"name";
             MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
             [directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
                 if (error) {
-                    NSLog(@"Error");
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warnung" message:@"Es konnte leider keine Route nach Vaduz gefunden" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
                 } else {
                     [self showRoute:response];
                     [[NSUserDefaults standardUserDefaults] setInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"currentLocation"] +1 forKey:@"currentLocation"];
@@ -131,9 +135,20 @@ static NSString * const kna = @"name";
     
 }
 - (void)showRoute:(MKDirectionsResponse *)response {
-    for (MKRoute *route in response.routes) {
-        [self.mapView removeOverlays:self.mapView.overlays];
-        [self.mapView addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+    CLLocationCoordinate2D coord1 = self.mapView.userLocation.location.coordinate;
+    
+    CLLocation *P1 = [[CLLocation alloc] initWithLatitude:coord1.latitude longitude:coord1.longitude];
+    CLLocation *P2 = [[CLLocation alloc] initWithLatitude:47.140405 longitude:9.51916];
+    CLLocationDistance  distance = [P1 distanceFromLocation:P2];
+    
+    if (distance < 5000) {
+        for (MKRoute *route in response.routes) {
+            [self.mapView removeOverlays:self.mapView.overlays];
+            [self.mapView addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+        }
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Achtung" message:@"Sie sind mehr als 5km entfernt von Vaduz." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
 }
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay

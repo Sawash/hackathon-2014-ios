@@ -64,6 +64,8 @@
     [self.Choices removeAllSegments];
     
     self.Choices = [self.Choices initWithItems:_currentTask.Choices];
+    
+    [self.Choices layoutIfNeeded];
 }
 
 - (IBAction)btnConfirmAction:(id)sender {
@@ -78,7 +80,6 @@
         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Falsch" message:@"Falsche Antwort" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
         [alertView show];
     }
-    
 }
 
 -(BOOL) isAnswerValid

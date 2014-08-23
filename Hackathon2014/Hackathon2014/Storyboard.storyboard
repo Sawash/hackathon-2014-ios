@@ -479,50 +479,6 @@
             </objects>
             <point key="canvasLocation" x="811" y="10"/>
         </scene>
-        <!--Root Task View Controller-->
-        <scene sceneID="ooE-aP-RYm">
-            <objects>
-                <viewController id="pcd-wm-fPm" customClass="RootTaskViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oHc-1y-LGe"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZZh-qV-lZ6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="k2k-kR-kxu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ogi-h3-2xZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="f6S-F4-TJj">
-                                <rect key="frame" x="20" y="133" width="280" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEg-cg-lSg">
-                                <rect key="frame" x="0.0" y="180" width="320" height="388"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="mTD-zJ-gpv"/>
-                    <connections>
-                        <outlet property="TaskContent" destination="jEg-cg-lSg" id="paD-v5-R9G"/>
-                        <outlet property="TaskHeaderImage" destination="Ogi-h3-2xZ" id="VJL-07-TzW"/>
-                        <outlet property="TaskQuestion" destination="f6S-F4-TJj" id="hg2-qa-TL1"/>
-                        <segue destination="H8t-sK-Uy4" kind="modal" identifier="segueLocation" id="wRA-tT-FCe"/>
-                        <segue destination="qvx-zl-agD" kind="modal" identifier="segueHighscore" id="dQz-6J-VfP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GOd-dq-ee0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3117" y="1063"/>
-        </scene>
         <!--Multiple Choice Task View Controller-->
         <scene sceneID="ZZ8-z4-Wm2">
             <objects>
@@ -584,12 +540,56 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="pcd-wm-fPm" kind="relationship" relationship="rootViewController" id="qIu-48-c4W"/>
+                        <segue destination="IWm-g4-5wZ" kind="relationship" relationship="rootViewController" id="3Yc-xz-9RZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oS6-Pv-7PH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2591" y="1063"/>
+        </scene>
+        <!--Root Task View Controller-->
+        <scene sceneID="R2V-sc-OFr">
+            <objects>
+                <viewController id="IWm-g4-5wZ" customClass="RootTaskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R40-82-eK7"/>
+                        <viewControllerLayoutGuide type="bottom" id="XZP-oI-pzK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OHi-uv-TRr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05t-TL-Bht">
+                                <rect key="frame" x="0.0" y="66" width="320" height="59"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="293" translatesAutoresizingMaskIntoConstraints="NO" id="BGA-VL-lHr">
+                                <rect key="frame" x="20" y="142" width="293" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7u-4a-ho1">
+                                <rect key="frame" x="0.0" y="223" width="320" height="345"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KKS-43-JTp"/>
+                    <connections>
+                        <outlet property="TaskContent" destination="K7u-4a-ho1" id="FDx-e0-Ru2"/>
+                        <outlet property="TaskHeaderImage" destination="05t-TL-Bht" id="qbd-Pl-vms"/>
+                        <outlet property="TaskQuestion" destination="BGA-VL-lHr" id="Bhl-s4-7Je"/>
+                        <segue destination="H8t-sK-Uy4" kind="modal" identifier="segueLocation" id="wE3-EV-uTz"/>
+                        <segue destination="qvx-zl-agD" kind="modal" identifier="segueHighscore" id="V0I-QD-Gu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICH-n8-CNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3087" y="1063"/>
         </scene>
     </scenes>
     <resources>
@@ -601,8 +601,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="90E-6f-jLc"/>
-        <segue reference="wRA-tT-FCe"/>
-        <segue reference="dQz-6J-VfP"/>
+        <segue reference="Zpq-hD-9EI"/>
+        <segue reference="V0I-QD-Gu8"/>
+        <segue reference="wE3-EV-uTz"/>
     </inferredMetricsTieBreakers>
 </document>
