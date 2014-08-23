@@ -28,12 +28,10 @@
 {
     [super viewDidLoad];
     // Debug
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentLocation"];
     self.locations = [NSMutableArray array];
     self.mapView.delegate = self;
     [self initializeMap];
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-    
     [self getPins];
     [self getRouteForTask:[self checkTaskNo]];
 }
@@ -59,8 +57,8 @@
             } else {
                 // Too fare away
                 NSLog(@"Nicht Nah genug");
-                self.startRaetselButton.tintColor = [UIColor grayColor];
-                self.startRaetselButton.enabled = NO;
+               // self.startRaetselButton.tintColor = [UIColor grayColor];
+               // self.startRaetselButton.enabled = NO;
             }
 
         }

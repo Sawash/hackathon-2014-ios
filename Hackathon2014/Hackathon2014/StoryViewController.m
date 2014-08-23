@@ -17,7 +17,6 @@ static NSString * const kCurrentView = @"currentStory";
 @property (strong, nonatomic) NSArray *array;
 @property (strong, nonatomic) NSArray *stories;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 
 @end
@@ -28,11 +27,10 @@ static NSString * const kCurrentView = @"currentStory";
 {
     [super viewDidLoad];
 	[self loadData];
-	[[NSUserDefaults standardUserDefaults] setValue:@0 forKey:kCurrentView];
 	[self assignData];
 	[self.view setBackgroundColor:[UIColor colorWithRed:0.898 green:0.941 blue:0.952 alpha:1]];
 	[self.view setBackgroundColor:[UIColor whiteColor]];
-	[self.progressBar setTintColor:[UIColor colorWithRed:0.078 green:0.447 blue:0.576 alpha:1]];
+//	[self.progressBar setTintColor:[UIColor colorWithRed:0.078 green:0.447 blue:0.576 alpha:1]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,15 +45,8 @@ static NSString * const kCurrentView = @"currentStory";
 	NSInteger currentView = [[[NSUserDefaults standardUserDefaults] valueForKey:kCurrentView] integerValue];
 	self.stories = self.array[0];
 
-	if (currentView == 0) {
-		self.backButton.enabled = false;
-	}
 	if (currentView == ([self.stories count] - 1)) {
 		self.nextButton.enabled = false;
-	}
-	
-	if (currentView > 0) {
-		self.backButton.enabled = true;
 	}
 	if (currentView < ([self.stories count] - 1)) {
 		self.nextButton.enabled = true;
@@ -67,7 +58,7 @@ static NSString * const kCurrentView = @"currentStory";
 		
 		self.titleLabel.textColor = [UIColor colorWithRed:0.078 green:0.447 blue:0.576 alpha:1];
 		self.titleLabel.text = [story valueForKey:kTitleKey];
-		self.textView.textColor = [UIColor colorWithRed:0.454 green:0.674 blue:0.749 alpha:1];
+		self.textView.textColor = [UIColor darkGrayColor];
 		self.textView.text = [story valueForKey:kBodyKey];
         NSNumber *number = [NSNumber numberWithInteger:[self.stories count]];
 		float total = [number floatValue];
@@ -76,6 +67,14 @@ static NSString * const kCurrentView = @"currentStory";
         self.title = [story valueForKey:kTitleKey];
 	} else
 		NSLog(@"Out of bounds");
+	
+	currentView++;
+	if (currentView >= [self.stories count]) {
+		currentView--;
+		NSLog(@"ERROR, MOTHERFUCKER!");
+	}
+	
+	[[NSUserDefaults standardUserDefaults] setInteger:currentView forKey:kCurrentView];
 }
 
 - (void)loadData {
@@ -91,15 +90,7 @@ static NSString * const kCurrentView = @"currentStory";
 	NSInteger currentView = [[[NSUserDefaults standardUserDefaults] valueForKey:kCurrentView] integerValue] + 1;
 	if (currentView >= [self.stories count]) {
 		currentView--;
-	}
-	[[NSUserDefaults standardUserDefaults] setInteger:currentView forKey:kCurrentView];
-	[self assignData];
-}
-
-- (IBAction)backButton:(id)sender {
-	NSInteger currentView = [[[NSUserDefaults standardUserDefaults] valueForKey:kCurrentView] integerValue] - 1;
-	if (currentView < 0) {
-		currentView++;
+		NSLog(@"ERROR, MOTHERFUCKER!");
 	}
 	[[NSUserDefaults standardUserDefaults] setInteger:currentView forKey:kCurrentView];
 	[self assignData];
