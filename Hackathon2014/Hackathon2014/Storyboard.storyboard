@@ -84,6 +84,7 @@
                                     <barButtonItem title="Start Rätsel" id="KCh-7X-cWF">
                                         <connections>
                                             <action selector="startRaetsel:" destination="qUy-kY-g86" id="Ve2-SM-nJf"/>
+                                            <segue destination="o1a-cj-fl3" kind="push" id="AiQ-iI-xJC"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="153-Bk-p77"/>
@@ -397,4 +398,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="AiQ-iI-xJC"/>
+    </inferredMetricsTieBreakers>
 </document>

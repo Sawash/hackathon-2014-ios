@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MathController.h"
+#import "StoryViewController.h"
 
 @interface MapViewController ()
 
@@ -30,13 +31,16 @@
     [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentLocation"];
     self.locations = [NSMutableArray array];
     self.mapView.delegate = self;
+    [self initializeMap];
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     [self getPins];
     [self getRouteForTask:[self checkTaskNo]];
 }
 - (void)initializeMap {
-    
+    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(47.140405, 9.51916);
+    MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 1000 , 1000)];
+    [mapView setRegion:adjustedRegion animated:YES];
 }
 - (void)checkDestinationforTask:(NSInteger)task {
     for (Adress *adress in self.locations) {
@@ -50,11 +54,13 @@
             if (distance < 10) {
                 // Close enough
                 NSLog(@"Nah Genug");
-                self.startRaetselButton.tintColor = [UIColor blueColor];
+                self.startRaetselButton.tintColor = [UIColor colorWithRed:19.f/255.f green:119.f/255.f blue:255.f/255.f alpha:1];
+                self.startRaetselButton.enabled = YES;
             } else {
                 // Too fare away
                 NSLog(@"Nicht Nah genug");
                 self.startRaetselButton.tintColor = [UIColor grayColor];
+                self.startRaetselButton.enabled = NO;
             }
 
         }
