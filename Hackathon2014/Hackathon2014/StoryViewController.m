@@ -46,11 +46,11 @@ static NSString * const kCurrentView = @"currentStory";
 	self.stories = self.array[0];
 
 	if (currentView == ([self.stories count] - 1)) {
-		self.nextButton.enabled = false;
-	}
-	if (currentView < ([self.stories count] - 1)) {
-		self.nextButton.enabled = true;
-	}
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:kCurrentView];
+    }
+//	if (currentView < ([self.stories count] - 1)) {
+//		self.nextButton.enabled = true;
+//	}
 	
 	if (((currentView + 1) <= [self.stories count]) && (currentView >= 0)) {
 		
@@ -69,10 +69,10 @@ static NSString * const kCurrentView = @"currentStory";
 		NSLog(@"Out of bounds");
 	
 	currentView++;
-	if (currentView >= [self.stories count]) {
-		currentView--;
-		NSLog(@"ERROR, MOTHERFUCKER!");
-	}
+//	if (currentView >= [self.stories count]) {
+//		currentView--;
+//		NSLog(@"ERROR, MOTHERFUCKER!");
+//	}
 	
 	[[NSUserDefaults standardUserDefaults] setInteger:currentView forKey:kCurrentView];
 }
@@ -90,7 +90,7 @@ static NSString * const kCurrentView = @"currentStory";
 	NSInteger currentView = [[[NSUserDefaults standardUserDefaults] valueForKey:kCurrentView] integerValue] + 1;
 	if (currentView >= [self.stories count]) {
 		currentView--;
-		NSLog(@"ERROR, MOTHERFUCKER!");
+		NSLog(@"ERROR, currentView > count!");
 	}
 	[[NSUserDefaults standardUserDefaults] setInteger:currentView forKey:kCurrentView];
 	[self assignData];

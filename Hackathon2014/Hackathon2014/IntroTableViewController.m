@@ -7,6 +7,7 @@
 //
 
 #import "IntroTableViewController.h"
+#import "MapViewController.h"
 
 @interface IntroTableViewController ()
 
@@ -18,15 +19,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentStory"];
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentTask"];
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentLocation"];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    NSInteger currentStory = [[NSUserDefaults standardUserDefaults] integerForKey:@"currentStory"];
+    NSInteger currentTask = [[NSUserDefaults standardUserDefaults] integerForKey:@"currentTask"];
+    NSInteger currentLocation = [[NSUserDefaults standardUserDefaults] integerForKey:@"currentLocation"];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (currentStory < 1) {
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentStory"];
+    }
+    if (currentTask < 1) {
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentTask"];
+    }
+    if (currentLocation < 1) {
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"currentLocation"];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +55,32 @@
     // Return the number of rows in the section.
     return 3;
 }
-
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.row == 2) {
+//        NSInteger currentStory = [[NSUserDefaults standardUserDefaults] integerForKey:@"currentStory"];
+//        NSInteger currentTask = [[NSUserDefaults standardUserDefaults] integerForKey:@"currentTask"];
+//        NSInteger currentLocation = [[NSUserDefaults standardUserDefaults] integerForKey:@"currentLocation"];
+//        
+//        if (currentLocation > currentStory) {
+//            if (currentLocation > currentTask) {
+//                // current Location der grösste Wert
+//                [self performSegueWithIdentifier:@"segueStory" sender:self];
+//            } else {
+//                [self performSegueWithIdentifier:@"segueStory" sender:self];
+//                // current Task der grösste Wert
+//            }
+//        } else if (currentTask > currentStory) {
+//            [self performSegueWithIdentifier:@"segueStory" sender:self];
+//            // current Task der grösste Wert
+//        } else {
+//            [self performSegueWithIdentifier:@"segueStory" sender:self];
+//            // current currentStory der grösste Wert
+//        }
+//        if (currentStory == currentLocation && currentStory == currentTask) {
+//            [self performSegueWithIdentifier:@"segueStory" sender:self];
+//        }
+//    }
+//}
 
 /*
 // Override to support conditional editing of the table view.

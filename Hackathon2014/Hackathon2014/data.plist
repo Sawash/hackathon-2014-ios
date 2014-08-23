@@ -5,9 +5,9 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>Hello World</string>
+			<string>Schloss Lichtenstein</string>
 			<key>body</key>
-			<string>A &quot;Hello world&quot; program is a computer program that outputs &quot;Hello, World!&quot; (or some variant thereof) on a display device. Because it is typically one of the simplest programs possible in most programming languages, it is by tradition often used to illustrate to beginners the most basic syntax of a programming language. It is also used to verify that a language or system is operating correctly.</string>
+			<string>Schloss Lichtenstein, auch als „Märchenschloss Württembergs“ bezeichnet, ist ein im Stil des Historismus erbautes Schloss des 19. Jahrhunderts über dem Ort Honau, Gemeinde Lichtenstein, im Landkreis Reutlingen in Baden-Württemberg.</string>
 			<key>image</key>
 			<string></string>
 		</dict>
@@ -27,38 +27,82 @@
 			<key>image</key>
 			<string></string>
 		</dict>
-		<dict>
-			<key>title</key>
-			<string>Schloss Lichtenstein</string>
-			<key>body</key>
-			<string>Schloss Lichtenstein, auch als „Märchenschloss Württembergs“ bezeichnet, ist ein im Stil des Historismus erbautes Schloss des 19. Jahrhunderts über dem Ort Honau, Gemeinde Lichtenstein, im Landkreis Reutlingen in Baden-Württemberg.</string>
-			<key>image</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>Landesfürst</string>
-			<key>body</key>
-			<string>Der Landesfürst ist das Staatsoberhaupt des Fürstentums Liechtenstein. Er ist als Staatsoberhaupt neben dem Landesvolk einer der beiden Träger der liechtensteinischen Souveränität und zugleich als Regent mit weitreichenden Regierungsbefugnissen ausgestattet, die er aber in der Regel grösstenteils an die Regierung delegiert. Der Landesfürst führt den offiziellen Titel Fürst von und zu Liechtenstein, Herzog von Troppau und Jägerndorf, Graf zu Rietberg, Regierer des Hauses von und zu Liechtenstein.[1]
-
-Da Liechtenstein gemäss seiner Verfassung eine konstitutionelle Erbmonarchie auf demokratischer und parlamentarischer Grundlage ist, ist das Amt des Landesfürsten erblich und wurde bis dato stets von einem männlichen Mitglied des Hauses Liechtenstein bekleidet.[2] Seit dem Jahr 1989 ist Hans-Adam II. von und zu Liechtenstein aktueller Landesfürst des Fürstentums Liechtenstein. Die Staatsgeschäfte nimmt allerdings seit August 2004 dessen Sohn, Erbprinz Alois von und zu Liechtenstein, als Prinzregent wahr.</string>
-			<key>image</key>
-			<string></string>
-		</dict>
 	</array>
 	<array>
 		<dict>
 			<key>choices</key>
 			<array>
-				<string>choice 2</string>
-				<string>choice 1</string>
+				<string>22&apos;000</string>
+				<string>27&apos;000</string>
+				<string>32&apos;000</string>
+				<string>37&apos;000</string>
 			</array>
 			<key>image</key>
 			<string>First Image</string>
 			<key>question</key>
-			<string>Multiple Choice Frage</string>
+			<string>Wie viele Einwohner hat Liechtenstein?</string>
 			<key>solutionIndex</key>
-			<integer>0</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>choices</key>
+			<array>
+				<string>Ja</string>
+				<string>Nein</string>
+			</array>
+			<key>image</key>
+			<string>First Image</string>
+			<key>question</key>
+			<string>Gehört Liechtenstein zur EU?</string>
+			<key>solutionIndex</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>choices</key>
+			<array>
+				<string>22&apos;000</string>
+				<string>27&apos;000</string>
+				<string>32&apos;000</string>
+				<string>37&apos;000</string>
+			</array>
+			<key>image</key>
+			<string>First Image</string>
+			<key>question</key>
+			<string>Wie viele Einwohner hat Liechtenstein?</string>
+			<key>solutionIndex</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>tasknummer</key>
+			<string>0</string>
+			<key>laengengrad</key>
+			<string>47.140405</string>
+			<key>breitengrad</key>
+			<string>9.51963</string>
+			<key>name</key>
+			<string>Rathaus Vaduz</string>
+		</dict>
+		<dict>
+			<key>tasknummer</key>
+			<string>1</string>
+			<key>laengengrad</key>
+			<string>47.139439</string>
+			<key>breitengrad</key>
+			<string>9.521888</string>
+			<key>name</key>
+			<string>Kunstmuseum Liechtenstein</string>
+		</dict>
+		<dict>
+			<key>tasknummer</key>
+			<string>2</string>
+			<key>laengengrad</key>
+			<string>47.139702</string>
+			<key>breitengrad</key>
+			<string>9.522768</string>
+			<key>name</key>
+			<string>Kathedrale St. Florin</string>
 		</dict>
 	</array>
 </array>

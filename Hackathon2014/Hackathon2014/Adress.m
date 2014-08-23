@@ -13,12 +13,14 @@
 @synthesize laengengrad = _laengengrad;
 @synthesize breitengrad = _breitengrad;
 @synthesize taskNo = _taskNo;
+@synthesize name = _name;
 
-- (id) initWithTaskNo:(NSInteger)task laengengrad:(float)lg undbreitengrad:(float)bg {
+- (id) initWithTaskNo:(NSInteger)task laengengrad:(float)lg name:(NSString *)name undbreitengrad:(float)bg {
     if ((self = [super init])) {
         _laengengrad = lg;
         _breitengrad = bg;
         _taskNo = task;
+        _name = name;
     }
     return self;
 }

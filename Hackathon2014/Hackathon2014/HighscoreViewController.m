@@ -39,18 +39,21 @@
 {
     [super viewDidLoad];
     _newHighscore = NO;
-    [self authenticateLocalPlayer];
+
     [[NSUserDefaults standardUserDefaults] setInteger:100 forKey:@"score"]; // Test
     [self loadScores];
     
     [self reportScore];
     
+
+    // Do any additional setup after loading the view.
+}
+- (void)viewDidAppear:(BOOL)animated {
+        [self authenticateLocalPlayer];
     if (_gameCenterEnabled) {
         [self showLeaderboardAndAchievements:YES];
     }
-    // Do any additional setup after loading the view.
 }
-
 - (void)loadScores {
     _score = [[NSUserDefaults standardUserDefaults] integerForKey:@"score"];
     _highscore = [[NSUserDefaults standardUserDefaults] integerForKey:@"score"];

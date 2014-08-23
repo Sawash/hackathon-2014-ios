@@ -10,6 +10,11 @@
 #import "MathController.h"
 #import "StoryViewController.h"
 
+static NSString * const ktaskNo = @"tasknummer";
+static NSString * const klg = @"laengengrad";
+static NSString * const kbg = @"breitengrad";
+static NSString * const kna = @"name";
+
 @interface MapViewController ()
 
 - (void)initializeMap;
@@ -17,6 +22,8 @@
 - (NSInteger)checkTaskNo;
 - (void)getRouteForTask:(NSInteger)task;
 - (void)checkDestinationforTask:(NSInteger)task;
+
+@property (nonatomic, strong) NSArray *plistData;
 
 @end
 
@@ -34,6 +41,7 @@
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     [self getPins];
     [self getRouteForTask:[self checkTaskNo]];
+    NSLog(@"%li", (long)[[NSUserDefaults standardUserDefaults] integerForKey:@"currentLocation"]);
 }
 - (void)initializeMap {
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(47.140405, 9.51916);
@@ -65,11 +73,25 @@
     }
     
 }
+        
 - (void)getPins {
     if (self.locations.count == 0) {
-        [self.locations addObject:[[Adress alloc] initWithTaskNo:0 laengengrad:47.140405 undbreitengrad:9.519163]]; // Rathaus Vaduz;
-        [self.locations addObject:[[Adress alloc] initWithTaskNo:1 laengengrad:47.139439 undbreitengrad:9.521888]]; // Kunstmuseum Vaduz;
-        [self.locations addObject:[[Adress alloc] initWithTaskNo:2 laengengrad:47.139702 undbreitengrad:9.522768]]; // Kathedrale St. Florin
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+            NSArray *array = [[NSArray alloc] initWithContentsOfFile:filePath];
+            self.plistData = array[2];
+
+        } else {
+            NSLog(@"No file found!");
+        }
+        NSUInteger a = self.plistData.count;
+        for (NSUInteger i = 0; i < a; i ++) {
+            NSDictionary *data = self.plistData[i];
+            float laeng = [[data valueForKey:klg] floatValue];
+            float breit = [[data valueForKey:kbg] floatValue];
+            NSInteger taskn = [[data valueForKey:ktaskNo] intValue];
+            [self.locations addObject:[[Adress alloc] initWithTaskNo:taskn laengengrad:laeng name:[data valueForKey:kna] undbreitengrad:breit]];
+        }
     }
     for (Adress * adress in self.locations) {
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(adress.laengengrad, adress.breitengrad);

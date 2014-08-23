@@ -13,7 +13,8 @@
 @property (nonatomic) NSInteger taskNo;
 @property (nonatomic) float laengengrad;
 @property (nonatomic) float breitengrad;
+@property (nonatomic, strong) NSString *name;
 
-- (id) initWithTaskNo:(NSInteger)task laengengrad:(float)lg undbreitengrad:(float)bg;
+- (id) initWithTaskNo:(NSInteger)task laengengrad:(float)lg name:(NSString *)name undbreitengrad:(float)bg;
 
 @end
